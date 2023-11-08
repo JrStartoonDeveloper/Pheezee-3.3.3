@@ -6,8 +6,8 @@ Firmware Version(Tested With):- 1.13.9
 server version:- 2.0.23
 Hardware Version MVP_3
 description:- 
-1. Login page Force Update bug fix.
-2. angle set for healthy side in live monitoring screen.
+1. Share Option for non premium user.
+2. Added Shoulder Deltoid images.
 
 ####################
 
