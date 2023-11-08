@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_margin="40dp"
+                android:layout_width="182dp"
+                android:layout_height="72dp"
+                android:background="@drawable/logo_lg_sg"/>
+
+            <LinearLayout
+                android:id="@+id/ig_error_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                card_view:cardCornerRadius="4dp"
+                android:background="@drawable/lg_error_border"
+                android:padding="5dp"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:id="@+id/lg_error_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/lg_nointernert_icon"/>
+                <TextView
+                    android:id="@+id/lg_error_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connect to internet and try again"
+                    android:textColor="#CC2016"
+                    android:fontFamily="@font/pheezee_font"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@drawable/lg_bottom_image"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:lineHeight="25.5dp"
+                        android:text="Log In"
+                        android:fontFamily="@font/pheezee_font"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="24dp"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tv_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/login_et_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ebrima"
+                                android:hint="  Email"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#FFFFFF"
+                                android:textColorHint="#90AFCA"
+                                android:drawableStart="@drawable/lg_email_icon"
+                                android:textSize="18dp"
+                                android:backgroundTint="#FFFFFF"
+                                android:theme="@style/AppTheme.NoActionBar" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tv_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/login_et_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ebrima"
+                                android:hint="  Password"
+                                android:inputType="textPassword"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#FFFFFF"
+                                android:drawableStart="@drawable/lg_pass_icon"
+                                android:textColorHint="#90AFCA"
+                                android:backgroundTint="#FFFFFF"
+                                android:textSize="18dp"
+                                android:theme="@style/AppTheme.NoActionBar" />
+                        </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/btn_forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:lineHeight="25.5dp"
+                        android:text="Forgot Password?"
+                        android:textColor="#4F7DA6"
+                        android:textFontWeight="700"
+                        android:textSize="13dp" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginEnd="30dp"
+                        android:width="120dp"
+                        android:background="@drawable/round_cancel_buttons"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Log In"
+                        android:textColor="#012E57"
+                        android:textFontWeight="500"
+                        android:textSize="16dp"
+                        android:theme="@style/AppTheme.customDesign.noActionBar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:lineHeight="25.5dp"
+                            android:text="New User?"
+                            android:textColor="#FFFFFF"
+                            android:textFontWeight="400"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/login_tv_signup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:lineHeight="25.5dp"
+                            android:text="@string/sign_up"
+                            android:textColor="#FFFFFF"
+                            android:textFontWeight="400"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--        <LinearLayout-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:gravity="center"-->
+    <!--            >-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:layout_margin="40dp"-->
+    <!--                android:layout_width="182dp"-->
+    <!--                android:layout_height="72dp"-->
+    <!--                android:background="@drawable/logo_lg_sg"/>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_margin="20dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Sign Up"-->
+    <!--                android:textSize="20dp"-->
+    <!--                android:textFontWeight="700"-->
+    <!--                android:textColor="#012E57"-->
+    <!--                android:lineHeight="25.5dp"/>-->
+    <!--            <com.google.android.material.textfield.TextInputLayout-->
+    <!--                android:id="@+id/tv_signup"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="70dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:background="@color/white"-->
+    <!--                >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_margin="0dp"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:background="@color/white">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/et_signup_name"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:textSize="18dp"-->
+
+    <!--                        android:fontFamily="@font/ebrima"-->
+    <!--                        android:hint="@string/signup_name"-->
+    <!--                        android:inputType="textPersonName"-->
+    <!--                        android:paddingStart="30dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        android:theme="@style/AppTheme.NoActionBar" />-->
+    <!--                </LinearLayout>-->
+    <!--            </com.google.android.material.textfield.TextInputLayout>-->
+    <!--            <com.google.android.material.textfield.TextInputLayout-->
+    <!--                android:id="@+id/tv_email"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="70dp"-->
+
+    <!--                android:background="@color/white"-->
+    <!--                >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_margin="0dp"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:background="@color/white">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/et_signup_email"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:textSize="18dp"-->
+
+    <!--                        android:fontFamily="@font/ebrima"-->
+    <!--                        android:hint="@string/signup_name"-->
+    <!--                        android:inputType="textPersonName"-->
+    <!--                        android:paddingStart="30dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        android:theme="@style/AppTheme.NoActionBar" />-->
+    <!--                </LinearLayout>-->
+    <!--            </com.google.android.material.textfield.TextInputLayout>-->
+    <!--            <com.google.android.material.textfield.TextInputLayout-->
+    <!--                android:id="@+id/tv_password"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="70dp"-->
+    <!--                android:background="@color/white"-->
+    <!--                >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_margin="0dp"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:background="@color/white">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/et_signup_password"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:textSize="18dp"-->
+
+    <!--                        android:fontFamily="@font/ebrima"-->
+    <!--                        android:hint="@string/signup_name"-->
+    <!--                        android:inputType="textPersonName"-->
+    <!--                        android:paddingStart="30dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        android:theme="@style/AppTheme.NoActionBar" />-->
+    <!--                </LinearLayout>-->
+    <!--            </com.google.android.material.textfield.TextInputLayout>-->
+    <!--            <com.google.android.material.textfield.TextInputLayout-->
+    <!--                android:id="@+id/tv_phone"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="70dp"-->
+    <!--                android:background="@color/white"-->
+    <!--                >-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:layout_margin="0dp"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:orientation="horizontal"-->
+    <!--                    android:background="@color/white">-->
+
+    <!--                    <com.google.android.material.textfield.TextInputEditText-->
+    <!--                        android:id="@+id/et_signup_phone"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:textSize="18dp"-->
+
+    <!--                        android:fontFamily="@font/ebrima"-->
+    <!--                        android:hint="@string/signup_name"-->
+    <!--                        android:inputType="textPersonName"-->
+    <!--                        android:paddingStart="30dp"-->
+    <!--                        android:paddingEnd="10dp"-->
+    <!--                        android:theme="@style/AppTheme.NoActionBar" />-->
+    <!--                </LinearLayout>-->
+    <!--            </com.google.android.material.textfield.TextInputLayout>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center"-->
+    <!--            android:orientation="vertical">-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="By signing up you agree with our terms and privacy policy"-->
+    <!--                android:textSize="13dp"-->
+    <!--                android:textFontWeight="400"-->
+    <!--                android:textColor="#4F7DA6"-->
+    <!--                android:lineHeight="25.5dp"-->
+    <!--                android:gravity="center"/>-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/btn_signup_create"-->
+    <!--                android:layout_width="fill_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_marginStart="30dp"-->
+    <!--                android:layout_marginTop="30dp"-->
+    <!--                android:layout_marginEnd="30dp"-->
+
+    <!--                android:width="120dp"-->
+    <!--                android:background="@drawable/round_same_buttons"-->
+    <!--                android:fontFamily="@font/ebrima"-->
+    <!--                android:gravity="center"-->
+    <!--                android:padding="10dp"-->
+    <!--                android:text="Sign Up"-->
+    <!--                android:textColor="@color/white_opaque"-->
+    <!--                android:textSize="18sp"-->
+    <!--                android:theme="@style/AppTheme.customDesign.noActionBar" />-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="100dp"-->
+    <!--            android:layout_marginTop="30dp"-->
+    <!--            android:gravity="bottom"-->
+    <!--            android:background="@drawable/sg_bottom_view"-->
+
+    <!--            >-->
+    <!--        </LinearLayout>-->
+    <!--    </LinearLayout>-->
+
+
+
+
+
+</LinearLayout>

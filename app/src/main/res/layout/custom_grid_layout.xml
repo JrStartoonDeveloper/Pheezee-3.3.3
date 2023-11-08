@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_cardview"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/user_icon"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="0.1dp"
+                            />
+                        <ImageView
+                           android:visibility="gone"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/bg_pati_prof_icon"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="0.60"
+                        >
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="-"
+
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="-"
+
+                            android:textStyle="normal"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        >
+                        <ImageView
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:src="@drawable/go_forward_icon"/>
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <!--            <ImageView-->
+<!--                android:id="@+id/imageView2"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:srcCompat="@mipmap/ic_launcher_round" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="First"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/imageView2" />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

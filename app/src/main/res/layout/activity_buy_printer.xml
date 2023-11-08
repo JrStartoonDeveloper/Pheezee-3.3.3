@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup_window">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar_bodypart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        app:elevation="@dimen/toolbar_dim_5"
+        android:elevation="@dimen/toolbar_dim_5"
+        android:background="@color/white_opaque"
+        tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="2dp"
+                android:id="@+id/iv_back_app_info"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:src="@drawable/green_back_arrow"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Buy Printer"
+                android:gravity="center|left"
+                android:textSize="20sp"
+                android:textColor="@color/good_green"
+                android:layout_gravity="center"
+                android:paddingStart="20dp"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linear_bar"
+            tools:ignore="MissingConstraints">
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/notification_title_layout"
+                android:layout_width="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:paddingTop="20dp"
+                    android:text="Thermal Printer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/good_green"
+                    android:id="@+id/notification_box_title"
+                    style="@style/pheezee_bold"
+                    android:fontFamily="@font/pheezee_font"
+                    android:textSize="25dp"
+                    android:layout_alignParentTop="true" />
+                <ImageView
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/bluetooth_printer_src"/>
+                <TextView
+                    android:layout_margin="16dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/ebrima"
+                    android:textColor="@color/darkGray"
+                    android:text="Our sales team will get in touch with you for the purchase of thermal printer"/>
+
+                <EditText
+                    android:id="@+id/pt_name_e"
+                    style="@style/pheezee_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/textbox"
+                    android:fontFamily="@font/pheezee_font"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                    android:textColorHint="@color/light_grey_text_hint"
+                    android:textSize="@dimen/Heading"/>
+                <EditText
+                    android:id="@+id/pt_phone_e"
+                    style="@style/pheezee_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/textbox"
+                    android:fontFamily="@font/pheezee_font"
+                    android:hint="Phone Number"
+                    android:inputType="number"
+                    android:padding="12dp"
+                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                    android:textColorHint="@color/light_grey_text_hint"
+                    android:textSize="@dimen/Heading"/>
+                <EditText
+                    android:id="@+id/pt_email_e"
+                    style="@style/pheezee_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/textbox"
+                    android:fontFamily="@font/pheezee_font"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                    android:textColorHint="@color/light_grey_text_hint"
+                    android:textSize="@dimen/Heading"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="16dp">
+                    <Button
+                        android:id="@+id/notification_ButtonCancel"
+                        style="@style/pheezee_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/image"
+                        android:layout_alignStart="@+id/image"
+                        android:layout_alignLeft="@+id/image"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_cancel_buttons"
+                        android:fontFamily="@font/pheezee_font"
+                        android:paddingRight="5dp"
+                        android:text="Buy Later"
+                        android:textAllCaps="false"
+                        android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                        android:textSize="@dimen/btn_text"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                    <Button
+                        android:id="@+id/notification_ButtonOK"
+                        style="@style/pheezee_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/image"
+                        android:layout_alignStart="@+id/image"
+                        android:layout_alignLeft="@+id/image"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_same_buttons"
+                        android:fontFamily="@font/pheezee_font"
+                        android:paddingRight="5dp"
+                        android:text="Yes, Please"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/btn_text"
+                        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

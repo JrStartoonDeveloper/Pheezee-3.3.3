@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:context="com.start.apps.pheezee.activities.ScanDevicesActivity"
+    android:layout_height="match_parent"
+    android:background="@color/progress_gray_trans">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_scandevices"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:elevation="5dp"
+        android:elevation="5dp"
+        android:background="@color/white_opaque">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/back_scan_devices"
+                    android:src="@drawable/green_back_arrow"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="Scan Devices"
+                    android:textColor="@color/good_green"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|end"
+                android:layout_weight="0.2"
+                android:gravity="center">
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        tools:context="start.apps.pheezee.activities.ScanDevicesActivity">
+        <include layout="@layout/content_scan_devices" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_stopscan"
+            app:layout_constraintEnd_toEndOf="@id/tv_stopscan"
+            app:layout_constraintStart_toStartOf="@id/tv_stopscan">
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                >
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/scan_devices_toolbar"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="scanning_devices.json"
+                    app:lottie_loop="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tv_stopscan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_heigt_done"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:background="@drawable/round_same_buttons"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:text="Scan"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

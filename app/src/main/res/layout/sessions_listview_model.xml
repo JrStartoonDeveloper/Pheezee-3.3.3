@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:background="@color/white"
+    android:paddingRight="16dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:id="@+id/image_exercise"
+                android:layout_height="match_parent"
+                android:src="@drawable/test_feedback"/>
+            <ImageView
+                android:id="@+id/selected_image"
+                android:layout_width="12dp"
+                android:layout_height="15dp"
+                android:background="@drawable/exercise_notselected_new"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="20dp"
+
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="0.22"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_listmodel"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/tv_bodypart_exercise"
+                    android:layout_marginStart="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                    android:layout_marginTop="12dp"
+                    android:textSize="@dimen/Heading"
+                    android:fontFamily="@font/pheezee_font"
+                    style="@style/pheezee_normal"
+                    android:text="BodyPart - Exercise" />
+                <TextView
+                    android:id="@+id/tv_muscle_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey_text_entry"
+                    android:layout_alignStart="@+id/tv_bodypart_exercise"
+                    android:layout_marginTop="35dp"
+                    android:textSize="@dimen/subheading"
+                    android:fontFamily="@font/pheezee_font"
+                    style="@style/pheezee_normal"
+                    android:text="Muscle name" />
+                <TextView
+                    android:id="@+id/tv_session_best_exercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#CC2016"
+                    android:layout_alignBottom="@+id/tv_bodypart_exercise"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="@dimen/text_entry"
+                    android:fontFamily="@font/pheezee_font"
+                    style="@style/pheezee_bold"
+                    android:text="Best Session"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/tv_session_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/tv_muscle_name"
+                    android:layout_alignStart="@+id/tv_bodypart_exercise"
+                    android:textSize="@dimen/text_entry"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/pheezee_font"
+                    style="@style/pheezee_bold"
+                    android:text="00m:01s" />
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tv_orientation_position"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@+id/tv_muscle_name"-->
+                <!--                    android:layout_alignStart="@+id/tv_bodypart_exercise"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:layout_marginStart="1dp"-->
+                <!--                    android:layout_marginTop="11dp"-->
+                <!--                    android:textSize="@dimen/text_entry"-->
+                <!--                    android:fontFamily="@font/pheezee_font"-->
+                <!--                    style="@style/pheezee_bold"-->
+                <!--                    android:text="Left-Supine" />-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_session_time"
+                    android:layout_alignParentEnd="true">
+
+
+                    <TextView
+                        android:id="@+id/tv_session_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="10dp"
+                        android:textSize="@dimen/text_entry"
+                        android:fontFamily="@font/pheezee_font"
+                        style="@style/pheezee_bold"
+                        android:text="Sit" />
+                    <ImageView
+                        android:id="@+id/effected_side_image"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/left_side_injured"/>
+                </LinearLayout>
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignTop="@+id/tv_muscle_name"
+                    android:layout_alignBottom="@+id/tv_muscle_name"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8dp"
+                    android:checked="true"
+                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/translucent_black"
+            app:layout_constraintTop_toBottomOf="@id/testing"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

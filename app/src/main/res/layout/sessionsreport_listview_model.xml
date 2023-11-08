@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="0.22"
+            android:orientation="vertical"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_listmodel"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tv_s_no"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                    android:textSize="@dimen/Heading"
+                    android:fontFamily="@font/pheezee_font"
+                    style="@style/pheezee_normal"
+                    android:text="12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/tv_s_no"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="14 May"
+                        android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                        android:textSize="@dimen/Heading"
+                        android:fontFamily="@font/pheezee_font"
+                        style="@style/pheezee_normal"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/tv_exercise_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="0"
+                                android:textColor="@color/dark_grey_text_entry"
+                                android:textSize="@dimen/subheading"
+                                android:fontFamily="@font/pheezee_font"
+                                style="@style/pheezee_normal"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="/20 Exercises"
+                                android:textColor="@color/dark_grey_text_entry"
+                                android:textSize="@dimen/subheading"
+                                android:fontFamily="@font/pheezee_font"
+                                style="@style/pheezee_normal"/>
+                        </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="bottom">
+
+                        <TextView
+                            android:id="@+id/tv_download_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="11 Exercises"
+                            android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                            android:textSize="@dimen/text_entry"
+                            android:fontFamily="@font/pheezee_font"
+                            style="@style/pheezee_normal"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_marginEnd="80dp"-->
+<!--                    android:layout_marginBottom="25dp">-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/download_icon"-->
+<!--                        android:layout_width="110dp"-->
+<!--                        android:paddingLeft="16dp"-->
+<!--                        android:paddingRight="16dp"-->
+<!--                        android:drawableStart="@drawable/baseline_download_24"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:background="@drawable/round_cancel_buttons"-->
+<!--                        android:text="Report"-->
+<!--                        style="@style/pheezee_normal"-->
+<!--                        android:textAllCaps="false"-->
+<!--                        android:textColor="@color/pheezee_text_blue_for_icon_text_background"-->
+<!--                        android:textSize="18dp" />-->
+
+<!--                </LinearLayout>-->
+<!--                <Button-->
+<!--                    android:id="@+id/download_icon"-->
+<!--                    style="@style/pheezee_normal"-->
+<!--                    android:layout_width="110dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginEnd="70dp"-->
+<!--                    android:layout_marginBottom="25dp"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:background="@drawable/round_cancel_buttons"-->
+<!--                    android:drawableStart="@drawable/baseline_download_24"-->
+<!--                    android:paddingLeft="16dp"-->
+<!--                    android:paddingRight="16dp"-->
+<!--                    android:text="Report"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"-->
+<!--                    android:textSize="18dp" />-->
+
+
+                <Button
+                    android:id="@+id/download_icon"
+                    style="@style/pheezee_normal"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/tv_s_no"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="65dp"
+                    android:layout_marginBottom="23dp"
+                    android:background="@drawable/download_report_enable_button"
+                    android:focusable="false"
+                    android:fontFamily="@font/pheezee_font"
+                    android:textAllCaps="false"
+                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                    android:textSize="@dimen/mid_heading_entry"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="visible">
+
+                </Button>
+                <Button
+                    android:id="@+id/download_icon_disable"
+                    style="@style/pheezee_normal"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/tv_s_no"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="65dp"
+                    android:layout_marginBottom="23dp"
+
+                    android:background="@drawable/download_report_disable_tablet"
+                    android:focusable="false"
+                    android:fontFamily="@font/pheezee_font"
+
+                    android:textAllCaps="false"
+                    android:textColor="#B3B3B3"
+                    android:textSize="@dimen/mid_heading_entry"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone">
+
+                </Button>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+
+                    >
+
+
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:id="@+id/share_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignTop="@+id/view_button_f"
+                        android:layout_alignBottom="@+id/view_button_f"
+                        android:paddingBottom="7dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/share_icon_n"></ImageView>
+
+                    <ImageView
+                        android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:id="@+id/view_button"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignTop="@+id/view_button"
+                    android:layout_alignEnd="@id/view_icon"
+                    android:paddingBottom="7dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/download_icon_n"></ImageView>
+                    <ImageView
+
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:id="@+id/print_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignTop="@+id/view_button"
+                        android:layout_alignEnd="@id/view_icon"
+                        android:paddingBottom="7dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/black_print_icon"></ImageView>
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:id="@+id/print_icon_2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignTop="@+id/view_button"
+                        android:layout_alignEnd="@id/view_icon"
+                        android:paddingBottom="7dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/black_print_icon"></ImageView>
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/view_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignTop="@+id/view_button"
+                        android:layout_alignBottom="@+id/view_button"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/view_icon_n"></ImageView>
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/report_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                android:background="@drawable/report_outer_layout"
+                android:padding="6dp"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/lg_fillcred_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total exercises exceeded 20, Please contact us for a smooth report download and better experience!"
+                    android:textColor="#FF0000"
+                    android:textSize="11.5dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

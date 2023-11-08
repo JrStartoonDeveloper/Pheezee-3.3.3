@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/phizioProfileNavigation"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/pheezee_text_blue_for_icon_text_background">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imageViewdp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="0.1dp"
+                app:layout_constraintBottom_toTopOf="@+id/fullName"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pheezee_font"
+                style="@style/pheezee_bold"
+                android:textSize="@dimen/toolbar"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:text="@string/nav_header_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+
+                app:layout_constraintBottom_toTopOf="@+id/emailId"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/emailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pheezee_font"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                style="@style/pheezee_normal"
+                android:alpha="0.5"
+                android:text="@string/nav_header_subtitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

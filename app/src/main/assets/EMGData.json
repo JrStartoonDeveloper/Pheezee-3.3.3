@@ -1,0 +1,327 @@
+{
+  "Shoulder": [
+    {
+      "Flexion": [
+        {
+          "Deltoid": 679,
+          "Coracobrachialis": 689,
+          "Trapezius":834
+        }
+      ],
+      "Extension": [
+        {
+          "Latissimus Dorsi": 162,
+          "Trapezius":834
+        }
+      ],
+      "Abduction": [
+        {
+          "Deltoid": 864,
+          "Infraspinatus": 308,
+          "Supraspinatus":590,
+          "Subscapularis": 500
+        }
+      ],
+      "Adduction": [
+        {
+          "Pectoralis Major": 222,
+          "Teres Minor": 228
+        }
+      ],
+      "Isometric": [
+        {
+          "Deltoid": 842,
+          "Coracobrachialis": 296,
+          "Latissimus Dorsi": 169,
+          "Infraspinatus": 471,
+          "Supraspinatus":369,
+          "Subscapularis": 208,
+          "Pectoralis Major": 426,
+          "Teres Minor": 132
+        }
+      ]
+    }
+  ],
+  "Elbow": [
+    {
+      "Flexion":[
+        {
+          "Biceps": 273,
+          "Tricep": 172,
+          "Brachialis (Deep)": 492,
+          "Brachioradialis": 482
+        }
+      ],
+      "Extension": [
+        {
+          "Biceps": 273,
+          "Tricep": 172,
+          "Brachialis (Deep)": 492,
+          "Brachioradialis": 482
+        }
+      ],
+      "Isometric": [
+        {
+          "Biceps": 558,
+          "Brachialis(Deep)": 371,
+          "Brachioradialis": 498,
+          "Tricep": 453,
+          "Anconeus": 289
+        }
+      ]
+    }
+  ],
+  "Wrist": [
+    {
+      "Flexion": [
+        {
+          "Flexor Carpi Radialis": 108,
+          "Flexor Carpi Ulnaris": 498
+        }
+      ],
+      "Extension": [
+        {
+          "Extensor Digitorum": 346
+        }
+      ],
+      "Isometric": [
+        {
+          "Flexor Carpi Radialis": 355,
+          "Palmaris Longus": 486,
+          "Flexor Carpi Ulnaris": 320,
+          "Flexor Pollicis Longus (Deep)": 258,
+          "Flexor Digitorum Superficialis (Intermediate)": 440,
+          "Flexor Digitorum Profundus (Deep)": 361,
+          "Extensor Carpi Radialis Longus": 648,
+          "Extensor Carpi Radialis Brevis": 577,
+          "Extensor Digitorum": 599,
+          "Extensor Carpi Ulnaris": 524,
+          "Extensor Digiti Minimi": 509
+        }
+      ]
+    }
+  ],
+  "Forearm": [
+    {
+      "Supination": [
+        {
+          "Supinator (Deep)": 69,
+          "Biceps": 406
+        }
+      ],
+      "Pronation": [
+        {
+          "Pronator Quadratus (Deep)": 109,
+          "Pronator Teres (Deep)": 150
+        }
+      ],
+      "Isometric": [
+        {
+          "Pronator Teres (Deep)": 231,
+          "Biceps": 741
+        }
+      ]
+    }
+  ],
+  "Hip": [
+    {
+      "Flexion": [
+        {
+          "Tensor Fasciae Latae": 331,
+          "quadratus femoris": 276,
+          "Rectus Femoris":191,
+          "Psoas Major": 109,
+          "Iliacus": 230
+
+        }
+      ],
+      "Extension": [
+        {
+          "Gluteus Maximus": 170,
+          "Semimembranosus": 629,
+          "Biceps Femoris": 161
+        }
+      ],
+      "Abduction": [
+        {
+          "Gluteus Medius": 127,
+          "Biceps Femoris": 125,
+          "Piriformis": 218
+        }
+      ],
+      "Adduction": [
+        {
+          "Adductor Magnus": 110,
+          "Adductor Longus": 393
+        }
+      ],
+      "Isometric": [
+        {
+
+        }
+      ]
+    }
+  ],
+  "Knee": [
+    {
+      "Flexion": [
+        {
+          "Gastrocnemius": 180,
+          "Rectus Femoris": 116,
+          "Biceps Femoris": 112,
+          "Vastus Lateralis": 205,
+          "Vastus Medialis" : 185,
+          "Sartorius": 255,
+          "Popliteus": 411,
+          "Semitendinosus": 190,
+          "Semimembranosus": 206
+        }
+      ],
+      "Extension": [
+        {
+          "Gastrocnemius": 180,
+          "Rectus Femoris": 116,
+          "Biceps Femoris": 112,
+          "Vastus Lateralis": 205,
+          "Vastus Medialis" : 185,
+          "Sartorius": 255,
+          "Popliteus": 411,
+          "Semitendinosus": 190,
+          "Semimembranosus": 206
+        }
+      ],
+      "Isometric": [
+        {
+          "Rectus Femoris": 232,
+          "Vastus Medialis" : 305,
+          "Vastus Intermedius": 426,
+          "Vastus Lateralis": 190,
+          "Biceps Femoris": 187,
+          "Semimembranosus": 303,
+          "Semitendinosus": 295
+        }
+      ]
+    }
+  ],
+  "Ankle": [
+    {
+      "Plantarflexion": [
+        {
+          "Soleus": 92,
+          "Gastrocnemius": 307
+        }
+      ],
+      "Dorsiflexion": [
+        {
+          "Tibialis Anterior": 304
+        }
+      ],
+      "Inversion": [
+        {
+          "Tibialis Anterior": 130
+        }
+      ],
+      "Eversion": [
+        {
+          "Peroneus Longus": 186
+        }
+      ],
+      "Isometric": [
+        {
+          "Tibialis Anterior": 274,
+          "Peroneus Longus": 564,
+          "Soleus": 388,
+          "Gastrocnemius": 337
+        }
+      ]
+    }
+  ],
+  "Thoracic": [
+    {
+      "Flexion": [
+        {
+          "Spinalis Thoracis": 91
+        }
+      ],
+      "Extension": [
+        {
+          "Spinalis Thoracis": 75,
+          "longissimus Thoracis": 264,
+          "Iliocostalis Thoracis": 527
+        }
+      ],
+      "Lateral Flexion": [
+        {
+          "Spinalis Thoracis": 65
+        }
+      ],
+      "Rotation": [
+        {
+          "Spinalis Thoracis": 113
+        }
+      ],
+      "Isometric": [
+        {
+          "Iliocostalis Thoracis": 149
+        }
+      ]
+    }
+  ],
+  "Lumbar": [
+    {
+      "Flexion": [
+        {
+          "Rectus Abdominis": 146
+        }
+      ],
+      "Extension": [
+        {
+          "Quadratus Lumborum": 74,
+          "Iliocostalis Lumborum": 309
+        }
+      ],
+      "Lateral Flexion": [
+        {
+          "Psoas major": 60,
+          "Quadratus Lumborum": 79
+        }
+      ],
+      "Rotation": [
+        {
+          "Multifidus": 61
+        }
+      ],
+      "Isometric": [
+        {
+          "Iliocostalis Lumborum": 132
+        }
+      ]
+    }
+  ],
+  "Abdomen": [
+    {
+      "Flexion": [
+        {
+          "Rectus Abdominis": 105
+        }
+      ],
+      "Lateral Flexion": [
+        {
+          "Rectus Abdominis": 86,
+          "External Oblique": 307
+        }
+      ],
+      "Rotation": [
+        {
+          "External Oblique": 88,
+          "Internal Oblique":418
+        }
+      ],
+      "Isometric": [
+        {
+
+        }
+      ]
+    }
+  ]
+}

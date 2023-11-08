@@ -1,0 +1,67 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/fragment_month_iv_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:contentDescription="@string/left_day"
+        android:src="@drawable/back_arrow_choice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/fragment_month_iv_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp"
+        android:contentDescription="@string/right_day"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_month_tv_report_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:text="No sessions done"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/pitch_black"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_month_iv_right"
+        app:layout_constraintStart_toEndOf="@+id/fragment_month_iv_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_month_generate_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/generate_report"
+        android:textColor="@color/good_green"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_month_tv_report_date" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.start.apps.pheezee.activities.PatientsView">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:elevation="@dimen/toolbar_dim_5"
+        android:elevation="@dimen/toolbar_dim_5"
+        android:background="@color/white_opaque"
+        tools:ignore="UnusedAttribute">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/ll_toolbar"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:paddingEnd="10dp"
+                android:paddingStart="0dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/down_sider_navigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/cd_navigation_menu"
+                    android:onClick="drawSideBar"
+                    android:src="@drawable/burger_menu"
+                    tools:ignore="TouchTargetSizeCheck" />
+                <!--<FrameLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:layout_marginStart="5dp"-->
+                <!--android:id="@+id/down_sider_navigation"-->
+                <!--android:onClick="drawSideBar"-->
+                <!--android:src="@drawable/burger_menu"-->
+                <!--android:contentDescription="@string/cd_navigation_menu" />-->
+                <!--<ImageView-->
+                <!--android:layout_width="8dp"-->
+                <!--android:layout_height="8dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginStart="5dp"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:background="@drawable/round_notificagion_icon"/>-->
+                <!--</FrameLayout>-->
+
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/home_home"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/good_green"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right">
+
+                <androidx.appcompat.widget.SearchView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:maxWidth="240dp"
+                    android:id="@+id/search_view"/>
+            </LinearLayout>
+
+
+
+            <!--            <Button-->
+            <!--                android:layout_width="30dp"-->
+            <!--                android:layout_height="25dp"-->
+            <!--                android:background="@color/yellow"-->
+            <!--                android:id="@+id/button_syn"-->
+            <!--                android:text="Sync"-->
+            <!--                android:layout_gravity="center"/>-->
+            <FrameLayout
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginRight="5dp">
+                <ImageView
+                    android:id="@+id/iv_sync_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_sync_black_24dp"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"/>
+                <ImageView
+                    android:id="@+id/iv_sync_data_disabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_sync_disabled"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"/>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/iv_bluetooth_connected"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_bluetooth_connected"
+                    android:contentDescription="@string/cd_bluetooth_connected" />
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:id="@+id/iv_bluetooth_disconnected"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bluetooth_disabled"
+                    android:visibility="invisible"
+                    android:contentDescription="@string/cd_bluetooth_disconnected" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp">
+                <RelativeLayout
+                    android:layout_width="5dp"
+                    android:id="@+id/rl_cap_view"
+                    android:layout_height="5dp"
+                    android:layout_gravity="top|center"
+                    android:layout_marginVertical="15dp"
+                    android:background="@color/red"/>
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="16dp"
+                    android:id="@+id/progress_battery_bar"
+                    android:layout_height="22dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_gravity="center"
+                    android:progressDrawable="@drawable/drawable_progress_battery_disconnected" />
+                <RelativeLayout
+                    android:layout_width="7dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/rl_battery_usb_state"
+                    android:visibility="gone"
+                    android:background="@drawable/battery_usb_state_connected_updated"
+                    android:layout_gravity="center">
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    android:id="@+id/tv_battery_percent"
+                    android:layout_gravity="center"
+                    android:text="@string/battery_zero"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp">
+                <LinearLayout
+                    android:id="@+id/add_device_bar"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="8sp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <!--                android:background="@color/dirtyWhite">-->
+                    <!--                @drawable/my_device_background-->
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/iv_device"
+                        android:onClick="addPheezeeDevice"
+                        android:src="@drawable/ic_device"
+                        android:layout_gravity="start|center"
+                        android:contentDescription="@string/cd_device_disconnected" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:visibility="gone"
+                        android:layout_height="50dp"
+                        android:id="@+id/iv_device_disconnected"
+                        android:onClick="addPheezeeDevice"
+                        android:src="@drawable/device_disconnected_icon"
+                        android:layout_gravity="start|center"
+                        android:contentDescription="@string/cd_device_disconnected" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/iv_device_connected"
+                        android:onClick="addPheezeeDevice"
+                        android:src="@drawable/ic_device_connected"
+                        android:visibility="gone"
+                        android:layout_gravity="start|center"
+                        android:contentDescription="@string/cd_device_connected" />
+
+                    <!--                <TextView-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_marginEnd="4dp"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:text="+ Add"-->
+                    <!--                    android:layout_marginLeft="16dp"-->
+                    <!--                    android:layout_marginRight="16dp"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="14sp"-->
+                    <!--                    android:paddingRight="10dp"-->
+                    <!--                    android:layout_gravity="end|center"-->
+                    <!--                    >-->
+
+                    <!--                </TextView>-->
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <include
+        layout="@layout/content_patients_view"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</RelativeLayout>

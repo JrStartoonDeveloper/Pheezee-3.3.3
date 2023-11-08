@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="emonji_array">
+        <item>@drawable/i0</item>
+        <item>@drawable/i1</item>
+        <item>@drawable/i5</item>
+        <item>@drawable/i6</item>
+        <item>@drawable/i8</item>
+    </array>
+    <array name="color_array">
+        <item>#FF5521</item>
+        <item>#F09712</item>
+        <item>#AC9B1D</item>
+        <item>#62D36C</item>
+        <item>#26A69A</item>
+    </array>
+
+    <array name="body_part">
+        <item>@drawable/shoulder_part_new</item>
+        <item>@drawable/shoulder_part_new</item>
+        <item>@drawable/elbow_part_new</item>
+        <item>@drawable/forearm_part_new</item>
+        <item>@drawable/wrist_part_new</item>
+
+        <item>@drawable/hip_part_new</item>
+        <item>@drawable/hip_part_new</item>
+        <item>@drawable/knee_part_new</item>
+        <item>@drawable/ankle_part_new</item>
+
+        <item>@drawable/spine_part_new</item>
+<!--        <item>@drawable/cervical_part_new</item>-->
+        <item>@drawable/thoracic_part_new</item>
+        <item>@drawable/lumbar_part_new</item>
+
+        <item>@drawable/abdomen_part_new</item>
+        <item>@drawable/abdomen_part_new</item>
+        <item>@drawable/other_part_new</item>
+    </array>
+
+</resources>

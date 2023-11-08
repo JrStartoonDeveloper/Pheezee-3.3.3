@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/grace_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="19dp"
+            android:background="@drawable/premium_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:text="Your Premium Is Enabled"
+            android:textColor="#000"
+            android:textSize="16dp"
+            android:fontFamily="@font/ebrima"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ebrima"
+            android:text="Now you can start downloading your reports."
+            android:layout_marginBottom="13dp"
+            android:textSize="16dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/premium_popup_buy_button"
+            android:layout_width="168dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/add_patient_save_background"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:textSize="15dp"
+                android:fontFamily="@font/ebrima"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/popup_window"
+    app:layout_constraintCircleRadius="0dp"
+    android:isScrollContainer="true">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar_bodypart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:elevation="@dimen/toolbar_dim_5"
+        app:elevation="@dimen/toolbar_dim_5"
+        tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_back_app_info"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:paddingLeft="2dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/green_back_arrow" />
+
+            <TextView
+                android:gravity="center|left"
+                android:id="@+id/tv_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/pheezee_font"
+                android:text="Patient Prof"
+                style="@style/pheezee_normal"
+                android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                android:textSize="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right|center"
+                android:layout_marginRight="18dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="13dp"
+                    android:src="@drawable/more_icon_patient_profile" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="@+id/my_toolbar_bodypart"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_button"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="40dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/alert_setvisible_view">
+                    <LinearLayout
+                        android:id="@+id/alert_outer_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="14dp"
+
+                        >
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/affected_alert"
+                            android:layout_width="55dp"
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="#CC2016"
+                            app:cardCornerRadius="9dp"
+                            android:layout_marginTop="20dp"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/alrt_icon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="12dp"
+                                    android:src="@drawable/alert_icon" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_toRightOf="@+id/alrt_icon">
+
+                                    <TextView
+                                        android:id="@+id/alert_text1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="8dp"
+                                        android:text="Update affected side"
+                                        android:textColor="@color/white"
+                                        android:textSize="22dp"
+                                        android:textStyle="bold"
+                                        android:visibility="gone"/>
+
+                                    <TextView
+                                        android:id="@+id/alert_text2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginTop="5dp"
+                                        android:paddingBottom="10dp"
+                                        android:text="Get better insights and exercise recommendations."
+                                        android:textColor="@color/white"
+                                        android:textSize="18dp"
+                                        android:visibility="gone"/>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Kranthi_1"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="20dp"
+                    tools:ignore="MissingConstraints">
+                    <LinearLayout
+                        android:layout_weight="0"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:layout_marginEnd="-15dp"
+                        android:layout_width="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/patient_image_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/my_toolbar_bodypart">
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="90sp"
+                                android:layout_height="90sp"
+                                android:layout_gravity="center|top"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="19dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/view_profi_icon" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_picture"
+                                android:layout_width="50sp"
+                                android:layout_height="65sp"
+                                android:layout_gravity="center|top"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="19dp"
+                                android:src="@drawable/test_patient_add_1"
+                                android:visibility="gone"
+                                app:civ_border_width="0.1dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/test_patient_add_1" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="0.70"
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:paddingTop="8dp"
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:gravity="left|center"
+                                    android:id="@+id/patientName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="8dp"
+                                    style="@style/pheezee_bold"
+                                    android:text=""
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                                    android:textSize="22dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:gravity="center|left"
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/tv_patient_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:text=""
+                                    android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                                    android:textSize="20dp"
+                                    style="@style/pheezee_normal"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/bar_cal"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    app:layout_constraintTop_toBottomOf="@+id/Kranthi_1"
+                    android:background="@drawable/linear_gradient_progress_background"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="MissingConstraints"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent">
+
+                        <LinearLayout
+                            android:layout_weight="3.8"
+                            android:layout_height="fill_parent"
+                            android:layout_width="match_parent">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:fontFamily="@font/pheezee_font"
+                                android:textColor="@color/white"
+                                style="@style/pheezee_bold"
+                                android:textSize="22dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Goal Reached"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingBottom="16dp"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent">
+                            <RelativeLayout
+                                android:id="@+id/semi_prog_phone_layout"
+                                android:layout_width="304dp"
+                                android:layout_height="170dp"
+                                android:layout_marginTop="20dp"
+                                android:visibility="gone"
+                                >
+                                <me.bastanfar.semicirclearcprogressbar.SemiCircleArcProgressBar
+                                    android:id="@+id/semi_prog_phone"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="304dp"
+                                    android:layout_height="140dp"
+                                    app:progressBarColor="#FCB000"
+                                    app:percent="0"
+                                    app:progressBarWidth="30"
+                                    app:progressPlaceHolderColor="#EFEFEF"
+                                    app:progressPlaceHolderWidth="25"
+
+                                    >
+
+
+                                </me.bastanfar.semicirclearcprogressbar.SemiCircleArcProgressBar>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="50dp"
+                                    android:layout_marginTop="55dp"
+                                    android:layout_marginEnd="50dp"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/tv_goal_num_phone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="36dp"
+                                        android:fontFamily="@font/pheezee_font" />
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:id="@id/semi_prog_layout"
+                                android:layout_width="304dp"
+                                android:layout_height="160dp"
+                                >
+                                <me.bastanfar.semicirclearcprogressbar.SemiCircleArcProgressBar
+                                    android:id="@+id/semi_prog"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="304dp"
+                                    android:layout_height="140dp"
+                                    app:progressBarColor="#FCB000"
+                                    app:percent="0"
+                                    app:progressBarWidth="30"
+                                    app:progressPlaceHolderColor="#EFEFEF"
+                                    app:progressPlaceHolderWidth="25"
+
+                                    >
+
+
+                                </me.bastanfar.semicirclearcprogressbar.SemiCircleArcProgressBar>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginStart="50dp"
+                                    android:layout_marginTop="55dp"
+                                    android:layout_marginEnd="50dp"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/tv_goal_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="36dp"
+                                        android:fontFamily="@font/pheezee_font" />
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/start_doing_session_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="start doing sessions to see progress"
+                                android:textSize="24dp"
+                                android:textColor="@color/white"
+                                android:visibility="gone"/>
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/testing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintTop_toBottomOf="@+id/bar_cal"
+                    android:orientation="vertical"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp">
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent">
+
+                        <LinearLayout
+                            android:layout_weight="0.6"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="16dp"
+                            android:layout_width="0dp">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/pt_profile_phone"/>
+
+                            <TextView
+                                android:id="@+id/tv_phno"
+                                style="@style/pheezee_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/pheezee_font"
+                                android:gravity="center|left"
+                                android:text="Phone no."
+                                android:textColor="@color/light_grey_text_hint"
+                                android:textSize="20dp"
+                                tools:ignore="MissingConstraints,TextSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:layout_width="0dp"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp">
+
+
+
+                            <TextView
+                                android:id="@+id/patientphone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="24dp"
+                                style="@style/pheezee_normal"
+                                android:fontFamily="@font/pheezee_font"
+                                android:textColor="@color/dark_grey_text_entry"
+                                android:padding="6dp"
+                                tools:ignore="MissingConstraints" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent">
+
+                        <LinearLayout
+                            android:layout_weight="0.6"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="16dp"
+                            android:layout_width="0dp">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/pt_profile_email"/>
+
+                            <TextView
+                                android:id="@+id/tv_mail"
+                                style="@style/pheezee_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/pheezee_font"
+                                android:gravity="center|left"
+                                android:text="Mail ID"
+                                android:textColor="@color/light_grey_text_hint"
+                                android:textSize="20dp"
+                                tools:ignore="MissingConstraints,TextSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:layout_width="0dp"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:id="@+id/patientemail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="24dp"
+                                android:padding="6dp"
+                                style="@style/pheezee_normal"
+                                android:fontFamily="@font/pheezee_font"
+                                android:textColor="@color/dark_grey_text_entry"
+                                tools:ignore="MissingConstraints" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent">
+
+                        <LinearLayout
+                            android:layout_weight="0.6"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="16dp"
+                            android:layout_width="0dp">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/pt_profile_body"/>
+
+                            <TextView
+                                android:id="@+id/tv_affected"
+                                style="@style/pheezee_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/pheezee_font"
+                                android:gravity="center|left"
+                                android:text="Affected side"
+                                android:textColor="@color/light_grey_text_hint"
+                                android:textSize="20dp"
+                                tools:ignore="TextSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:layout_width="0dp"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp">
+
+                            <ImageView
+                                android:id="@+id/effected_side"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/left_side_injured"/>
+
+                            <TextView
+                                android:gravity="center|left"
+                                android:id="@+id/tv_affected_side"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="24dp"
+                                android:fontFamily="@font/ebrima"
+                                android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                                android:padding="6dp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent">
+
+                        <LinearLayout
+                            android:layout_weight="0.6"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="16dp"
+                            android:layout_width="0dp">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/pt_profile_condition"/>
+
+                            <TextView
+                                android:id="@+id/tv_condition"
+                                style="@style/pheezee_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/pheezee_font"
+                                android:gravity="center|left"
+                                android:text="Condition"
+                                android:textColor="@color/light_grey_text_hint"
+                                android:textSize="20dp"
+                                tools:ignore="TextSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:layout_width="0dp"
+                            android:gravity="center|left"
+                            android:paddingLeft="10dp">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/crt_icon"/>
+
+
+                            <TextView
+                                android:id="@+id/tv_condition_det"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:fontFamily="@font/pheezee_font"
+                                android:textColor="@color/dark_grey_text_entry"
+                                android:textSize="24dp"
+                                style="@style/pheezee_normal"
+                                android:padding="6dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent">
+
+                        <LinearLayout
+                            android:layout_weight="0.6"
+                            android:layout_height="fill_parent"
+                            android:gravity="center|left"
+                            android:paddingLeft="16dp"
+                            android:layout_width="0dp">
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginRight="15dp"
+                                android:src="@drawable/pt_profile_speciality"/>
+
+                            <TextView
+                                android:id="@+id/tv_Speciality"
+                                style="@style/pheezee_normal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/pheezee_font"
+                                android:gravity="center|left"
+                                android:text="Speciality"
+                                android:textColor="@color/light_grey_text_hint"
+                                android:textSize="20dp"
+                                tools:ignore="TextSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_height="fill_parent"
+                            android:layout_width="0dp"
+                            android:gravity="center|left">
+
+
+                            <TextView
+                                android:id="@+id/tv_Speciality_det"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="24dp"
+                                style="@style/pheezee_normal"
+                                android:fontFamily="@font/pheezee_font"
+                                android:textColor="@color/dark_grey_text_entry"
+                                android:padding="6dp"
+                                tools:ignore="MissingConstraints" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/testing"
+                    android:orientation="vertical">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/translucent_black"
+                        app:layout_constraintTop_toBottomOf="@id/testing"
+                        />
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_pdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@color/white"
+                        >
+
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/view_line_l"
+                            android:orientation="horizontal"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent"
+                            >
+
+                            <LinearLayout
+                                android:paddingLeft="16dp"
+                                android:layout_weight="0.6"
+                                android:layout_height="fill_parent"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_width="0dp">
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_width="22dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/medical_icon"/>
+
+                                <TextView
+                                    android:id="@+id/tv_Medicalhistory"
+                                    style="@style/pheezee_bold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:gravity="center|left"
+                                    android:padding="6dp"
+                                    android:text="Medical History"
+                                    android:textColor="@color/light_grey_text_hint"
+                                    android:textSize="20dp"
+                                    tools:ignore="MissingConstraints,TextSizeCheck" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_height="fill_parent"
+                                android:layout_width="0dp"
+                                android:paddingLeft="10dp">
+                                <TextView
+                                    android:gravity="center|left"
+                                    android:id="@+id/tv_Medicalhistory_det"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text=""
+                                    android:textSize="24dp"
+                                    style="@style/pheezee_normal"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:textColor="@color/dark_grey_text_entry"
+                                    tools:ignore="MissingConstraints" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/translucent_black"
+                        app:layout_constraintTop_toBottomOf="@id/testing"
+                        />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/kranthi_burra_0"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/testing"
+                    tools:ignore="MissingConstraints">
+
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="60dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp">
+
+                    <LinearLayout
+                        android:layout_weight="0.9"
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp">
+                        <LinearLayout android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+
+                                <TextView
+                                    android:id="@+id/report_limit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:text="20"
+                                    android:textFontWeight="1000"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:paddingLeft="5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="16dp"
+                                    android:textColor="#002647"
+                                    android:text="exercises done today"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#AEACAC"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:textSize="14dp"
+                                    android:text="out of 20"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_weight="0.1"
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/machudu"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/translucent_black"
+                    app:layout_constraintTop_toBottomOf="@id/testing"
+                    android:layout_marginBottom="10dp"
+                    />
+                <LinearLayout
+                    android:id="@+id/kranthi_burra"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tes"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    tools:ignore="MissingConstraints">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_start_date"
+
+                        >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingTop="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+
+                                <TextView
+                                    style="@style/pheezee_normal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:gravity="center"
+                                    android:text="Start date"
+                                    android:textColor="@color/light_grey_text_hint"
+                                    android:textSize="20dp"
+                                    tools:ignore="TextSizeCheck,TextSizeCheck" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingBottom="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:id="@+id/join"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:textColor="@color/dark_grey_text_entry"
+                                    android:textSize="22dp"
+                                    style="@style/pheezee_normal"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/bg_start_date">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingTop="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+
+                                <TextView
+                                    style="@style/pheezee_normal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:gravity="center"
+
+                                    android:text="Last session"
+                                    android:textColor="@color/light_grey_text_hint"
+                                    android:textSize="20dp"
+                                    tools:ignore="TextSizeCheck,TextSizeCheck" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingBottom="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:id="@+id/last_session"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:textColor="@color/dark_grey_text_entry"
+                                    android:textSize="22dp"
+                                    style="@style/pheezee_normal"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/bg_start_date"
+                        >
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingTop="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+
+                                <TextView
+                                    style="@style/pheezee_normal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+
+                                    android:text="Sessions"
+                                    android:textColor="@color/light_grey_text_hint"
+                                    android:textSize="20dp"
+                                    tools:ignore="TextSizeCheck" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingBottom="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:id="@+id/session_count_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    style="@style/pheezee_normal"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:textColor="@color/dark_grey_text_entry"
+                                    android:textSize="22dp"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:layout_marginStart="2dp"
+                        android:layout_height="fill_parent"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_start_date">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent">
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingTop="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:text="Reports"
+                                    style="@style/pheezee_normal"
+                                    android:textColor="@color/light_grey_text_hint"
+                                    android:textSize="22dp"
+                                    />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:gravity="start"
+                                android:paddingStart="5dp"
+                                android:paddingBottom="3dp"
+                                android:layout_height="fill_parent"
+                                android:layout_width="match_parent">
+                                <TextView
+                                    android:id="@+id/report_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/pheezee_font"
+                                    android:gravity="center"
+                                    style="@style/pheezee_normal"
+                                    android:textColor="@color/dark_grey_text_entry"
+                                    android:textSize="22dp"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/translucent_black"
+                    android:layout_marginTop="17dp"
+
+                    />
+                <LinearLayout
+                    android:id="@+id/start_session_outer_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+
+                        android:background="@color/white"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="5dp"
+
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true"
+                        tools:ignore="MissingConstraints">
+
+                        <LinearLayout
+                            android:id="@+id/recommendation_view"
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="Recommended Assessments"
+                                android:textColor="#012E57"
+                                android:textSize="22dp"
+                                android:textStyle="bold" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recc_recycle_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/exer_completed_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+                            <ImageView
+                                android:layout_width="84dp"
+                                android:layout_height="84dp"
+                                android:background="@drawable/recomm_done_icon"
+                                android:layout_marginTop="53dp"
+                                android:layout_marginBottom="26dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="All Recommended Assessments are Completed"
+                                android:textSize="25dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginRight="40dp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textColor="#002647"
+
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(13/04/23)"
+                                android:textColor="#002647"
+                                android:textSize="17dp"
+                                android:layout_marginBottom="18dp"
+                                android:layout_marginTop="10dp"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/start_session_View"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="27dp"
+                                android:layout_marginTop="74dp"
+                                android:layout_marginRight="27dp"
+                                android:layout_marginBottom="16dp"
+                                android:gravity="center"
+                                android:textSize="22dp"
+                                android:text="Once you start doing sessions, Recommendations will be shown here." />
+                            <Button
+                                android:layout_width="176dp"
+                                android:layout_height="48dp"
+                                android:id="@+id/start_exercise"
+                                android:background="@drawable/round_same_buttons"
+                                android:text="Start Session"
+                                android:textColor="#F5FFFF"
+                                android:textAllCaps="false"
+                                android:textSize="22dp"
+                                android:layout_marginBottom="66dp"
+                                />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/record_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:background="@color/white"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="3dp"
+                        app:cardUseCompatPadding="true"
+                        tools:ignore="MissingConstraints">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Record"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="12dp"
+                                android:textStyle="bold"
+                                android:textSize="19dp"
+                                android:textColor="#9A9898"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/AffectedSide_Text_Only"
+                                        android:visibility="visible"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="12dp"
+                                        android:text="Affected Side"
+                                        android:textSize="22dp"
+                                        android:layout_marginLeft="16dp"
+                                        android:textStyle="bold" />
+                                    <TextView
+                                        android:visibility="visible"
+                                        android:id="@+id/AffectedSide_Text"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="12dp"
+                                        android:text=""
+                                        android:textSize="22dp"
+                                        android:layout_marginLeft="16dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:cardCornerRadius="4dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:visibility="visible">
+
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/record_affected_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="visible" />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/AffectedSide_View"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/HealthySide_Text_Only"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text="Healthy Side"
+                                    android:layout_marginLeft="16dp"
+                                    android:textSize="24dp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"/>
+                                <TextView
+                                    android:id="@+id/HealthySide_Text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:text=""
+                                    android:layout_marginLeft="16dp"
+                                    android:textSize="24dp"
+                                    android:textStyle="bold"
+                                    android:visibility="visible"/>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:cardCornerRadius="4dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:padding="10dp"
+                                        android:visibility="visible">
+
+
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/record_Healthy_view"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="visible" />
+                                    </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/start_session"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_cancel_buttons"
+                android:text="Start Session"
+                android:fontFamily="@font/pheezee_font"
+                android:textAllCaps="false"
+                style="@style/pheezee_normal"
+                android:visibility="visible"
+                android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                android:textSize="@dimen/btn_text" />
+            <Button
+                android:id="@+id/start_session_disable"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/start_session_disable"
+                android:text="Start Session"
+                android:fontFamily="@font/pheezee_font"
+                android:textAllCaps="false"
+                style="@style/pheezee_normal"
+                android:visibility="gone"
+                android:textColor="#B3B3B3"
+                android:textSize="@dimen/btn_text" />
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="3dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/pheezee_font"
+                android:background="@drawable/round_same_buttons"
+                android:text="View Reports"
+                android:textAllCaps="false"
+                style="@style/pheezee_normal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text" />
+
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/addBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="1dp"
+                android:background="@drawable/round_same_buttons"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <Button
+
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_same_buttons"
+                android:text="Delete"
+                android:fontFamily="@font/pheezee_font"
+                android:textAllCaps="false"
+                style="@style/pheezee_normal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/text_data"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_data_01"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/text_data_02"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/text_data_03"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="start.apps.pheezee">
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        tools:remove="android:maxSdkVersion" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name="com.start.apps.pheezee.App"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/pheezee_app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/pheezee_app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:theme"
+        tools:targetApi="r">
+        <activity
+            android:name="com.start.apps.pheezee.activities.SessionSummeryThermalPrint"
+            android:exported="false" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.SubscriptionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.start.apps.pheezee.activities.BuyPrinterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.TestingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.BluetoothScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.ViewPatientScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.SortHistoryDateTwo"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.SortHistoryYear"
+            android:exported="false" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.SortHistroyMonth"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.SortHistoryDate"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.FinalHistoryPatient"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.popup.ViewPopUpWindow"
+            android:exported="false"
+            android:largeHeap="true"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.WarrantyDetails"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.ViewReportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.DeleteAccountTwo"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.DeleteAccountOne"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.TeamsAndConditions"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.ChangePassword"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.MyAccountPannel"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.start.apps.pheezee.Usermanual"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/actions" />
+
+        <service
+            android:name="com.start.apps.pheezee.services.PheezeeBleService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.start.apps.pheezee.services.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.start.apps.pheezee.services.FirmwareLogService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.SyncDataToTheServerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.FirmwareUpdatePresentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.HealthUpdatePresentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.DeviceLocationStatusService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.DeviceDetailsService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.DeviceEmailUpdateService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.DeviceDeactivationStatusService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.start.apps.pheezee.services.OtaMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.my.package.name.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.start.apps.pheezee.services.Scanner"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBarLogin"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name="com.start.apps.pheezee.activities.OnBoardingActivity" />
+        <activity android:name="com.start.apps.pheezee.activities.EditProfileActivity" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.PatientsView"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name="com.start.apps.pheezee.services.BluetoothReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.adapter.action.ACL_DISCONNECTED" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED" />
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.start.apps.pheezee.dfu.DfuService"
+            android:exported="true"
+            android:label="@string/dfu_service_title">
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.action.DFU_UPLOAD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.start.apps.pheezee.activities.OnStartActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.start.apps.pheezee.activities.ScanDevicesActivity"
+            android:label="@string/title_activity_scan_devices"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.PhizioProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.ReportDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.DeviceInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.home" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.BodyPartSelection"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.MonitorActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.SessionReportActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.AppInfo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.start.apps.pheezee.activities.ExercisePrescriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

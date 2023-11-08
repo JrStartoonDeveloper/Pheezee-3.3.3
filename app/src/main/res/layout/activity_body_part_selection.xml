@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.start.apps.pheezee.activities.BodyPartSelection">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar_bodypart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:background="@color/white_opaque"
+        android:elevation="@dimen/toolbar_dim_5"
+        app:elevation="@dimen/toolbar_dim_5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="2dp"
+                android:id="@+id/iv_back_body_part_selection"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:src="@drawable/green_back_arrow"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="20sp"
+                android:text="@string/body_part"
+                android:textColor="@color/good_green"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|end"
+            android:visibility="visible"
+            android:layout_weight="0.09"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/summary_share"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_share_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/injured_side_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bodyPartRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/bodypart_list_padding_bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/fab_done"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="@dimen/button_heigt_done"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="1sp"
+            android:layout_marginStart="6sp"
+            android:layout_marginEnd="6sp"
+            android:background="@drawable/round_same_buttons"
+            android:onClick="startMonitorSession"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:text="Done"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>>
+</LinearLayout>

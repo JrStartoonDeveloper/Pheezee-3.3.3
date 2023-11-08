@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="60dp"
+    android:background="@color/ic_add_patient_grey_background"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.start.apps.pheezee.activities.PatientsView"
+    tools:showIn="@layout/app_bar_patients_view">
+
+    <!--<androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+    <!--    android:id="@+id/refesh_layout"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent">-->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="60dp">
+
+        <LinearLayout
+            android:id="@+id/ll_device_and_bluetooth"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_background_connect_to_pheezee"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_add_bluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/turn_on_bluetooth" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_add_device"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_marginTop="0.5dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_connect_to_pheezee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_to_device" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/ll_profile_update"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/good_green"
+            android:orientation="vertical">
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_profile_update_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="22sp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="2sp"
+                    android:layout_weight="3">
+                    <ImageView
+                        android:id="@+id/DialogWarning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:src="@drawable/ic_warning_24pt"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ll_profile_update_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BRAND YOUR HOSPITAL ON REPORTS            "
+                        android:textSize="15sp"
+                        android:textColor="@color/white"/>
+                    <TextView
+                        android:id="@+id/ll_profile_update_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:text="Fill your hospital details and let your brand be visible on Pheezee reports."
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        android:id="@+id/DialogCloseButton"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:layout_height="wrap_content"
+
+                        android:src="@drawable/ic_cross"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_marginTop="15sp"
+                android:id="@+id/edit_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:layout_gravity="center"
+                android:textSize="13sp"
+                android:text="Edit here"
+                android:textAllCaps="false"
+                android:paddingRight="25sp"
+                android:paddingLeft="25sp"
+                android:layout_marginBottom="10sp"
+
+                android:textColor="@color/good_green"
+                android:background="@drawable/round_cancel_buttons"
+                ></Button>
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/patients_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:paddingBottom="50dp"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_archive_patients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/archive_patient"
+                android:textColor="@color/good_green"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/patients_recycler_view" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noPatient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <ImageView
+                android:id="@+id/reportIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/add_patients_text"
+                android:src="@drawable/empty_patient_screen_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_start_clinic_session"
+                app:layout_constraintVertical_bias="0.304" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/what_is_pheezee"
+                android:textColor="@color/good_green"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportIcon"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <TextView
+                android:id="@+id/tv_patient_view_add_patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/inputfield_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/add_patients_text"
+                android:textColor="@color/good_green"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_start_clinic_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/start_clinic_session_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/start_clinic_session"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+    <ImageView
+        android:id="@+id/home_iv_addPatients"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/cd_floating"
+        android:enabled="true"
+        android:nestedScrollingEnabled="true"
+        android:src="@mipmap/ic_add_patient"
+        android:translationZ="0.0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleLarge" />
+
+        <LinearLayout
+            android:layout_marginLeft="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/good_green"
+                android:textSize="20dp"
+                android:text="Printing in progress."
+                android:fontFamily="@font/ebrima"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/good_green"
+                android:textSize="15dp"
+                android:text="Please wait..."
+                android:fontFamily="@font/ebrima"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="dfu_service_title">nRF Toolbox DFU Proxy</string>
+
+    <string name="dfu_example_files_created">Example HEX files were copied to /sdcard/Nordic Semiconductor.</string>
+    <string name="dfu_example_new_files_created">New example HEX files were copied to /sdcard/Nordic Semiconductor.</string>
+    <string name="dfu_scripts_created">DFU script files were copied to /sdcard/Nordic Semiconductor.</string>
+
+    <string name="dfu_file_size_text">%d bytes</string>
+    <string name="dfu_file_status_ok">OK</string>
+    <string name="dfu_file_status_ok_with_init">OK (Init file selected)</string>
+    <string name="dfu_file_status_no_file">File not loaded</string>
+    <string name="dfu_file_status_invalid">Invalid file</string>
+    <string name="dfu_file_status_error">Reading file failed</string>
+    <string name="dfu_file_status_invalid_message">Please, select valid HEX file</string>
+    <string name="dfu_file_info">Info</string>
+
+    <string name="dfu_action_upload">UPLOAD</string>
+    <string name="dfu_action_upload_cancel">CANCEL</string>
+
+    <string name="dfu_settings_dfu">DFU options</string>
+    <string name="dfu_settings_dfu_packets_receipt_notification_label">Packets receipt notification procedure</string>
+    <string name="dfu_settings_dfu_number_of_packets_label">Number of packets</string>
+    <string name="dfu_settings_dfu_mbr_size">MBR size</string>
+    <string name="dfu_settings_dfu_mbr_size_title">MBR size (4096 on nRF51, 12288 on nRF52)</string>
+    <string name="dfu_settings_dfu_keep_bond">Keep bond information</string>
+    <string name="dfu_settings_dfu_assume_dfu_mode">External MCU DFU</string>
+    <string name="dfu_settings_dfu_assume_dfu_mode_info">Check this switch to ON if you want to perform a DFU operation without jumping to the bootloader mode on a device
+		with a DFU implementation from SDK 6.1 or older. To achieve the same result on any newer implementation the DFU Version characteristic should return value other than 0x0100.</string>
+    <string name="dfu_settings_dfu_about">About DFU</string>
+    <string name="dfu_settings_dfu_about_summary">DFU documentation on Nordic\'s Developer Zone</string>
+    <string name="dfu_settings_dfu_information">Information</string>
+    <string name="dfu_settings_dfu_number_of_packets_info">During a DFU operation a lot of data packets are being sent to the target. The <i>onCharacteristicWrite(...)</i>
+		callback in Android API is invoked when the data has been written to the outgoing queue, not when physically sent. Packet receipt notifications were introduced to
+		prevent from overflowing the queue. Depending on the device model, disabling the notifications or setting the value to “high” (> ~300) may make the DFU process freeze
+		at some point.</string>
+
+    <string name="dfu_file_type_title">Select file type</string>
+    <string-array name="dfu_file_type">
+        <item>Distribution packet (ZIP)</item>
+        <item>Soft Device</item>
+        <item>Bootloader</item>
+        <item>Application</item>
+    </string-array>
+    <string name="dfu_file_init_title">Init packet</string>
+    <string name="dfu_file_init_message">Do you want to select the Init packet file?\n
+		The Init packet file (*.dat) should contain the device type and revision, application version, list of supported Soft Devices and the firmware CRC
+		in binary format or, with old versions of the DFU bootloader, only the CRC (CRC-CCITT-16).
+		With the new version of the bootloader the extended Init packet is <b>required</b>.</string>
+
+    <string name="dfu_unknown_name">unnamed device</string>
+    <string name="dfu_uploading_percentage_label">0%</string>
+    <string name="dfu_uploading_percentage">%d%%</string>
+    <string name="dfu_default_name">DEFAULT DFU</string>
+    <string name="dfu_confirmation_dialog_title">Application Uploading</string>
+    <string name="dfu_upload_dialog_cancel_message">Are you sure to cancel upload?</string>
+    <string name="dfu_success">Application has been transferred successfully.</string>
+    <string name="dfu_aborted">Uploading of the application has been canceled.</string>
+
+    <string name="dfu_zip_info_text">Starting from nRF Toolbox v1.12 the new Distribution packet (ZIP) is the recommended method for distributing firmware upgrades.
+		You can create the ZIP file using the <b>nrf utility</b> tool, which is part of Master Control Panel 3.8.0+. For more detailed information, see the DFU documentation.
+		\n\n<b>Backward compatibility</b>
+		\nThe nRF Toolbox also supports all old file formats: HEX and BIN files, separate DAT files and ZIP files without a manifest file but with a fixed naming convention:
+</string>
+</resources>

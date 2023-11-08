@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.start.apps.pheezee.activities.SortHistoryDate">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar_bodypart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        app:elevation="@dimen/toolbar_dim_5"
+        android:elevation="@dimen/toolbar_dim_5"
+        android:background="@color/white"
+        tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="2dp"
+                android:id="@+id/iv_back_app_info"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:src="@drawable/green_back_arrow"/>
+            <TextView
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Patient List"
+                android:layout_gravity="center"
+                android:paddingStart="20dp"
+                android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                style="@style/pheezee_normal"
+                android:textSize="@dimen/toolbar"
+                android:fontFamily="@font/pheezee_font"
+
+                />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/kranthi_k"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btns_"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar_bodypart"
+        tools:ignore="MissingConstraints">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="#D9D9D9" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/kranthi_ln"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btns_"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/kranthi_k"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btn_today"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@drawable/bg_pat_btn_3"
+                android:text="Today"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="3dp"
+            android:paddingRight="2dp">
+
+            <Button
+                android:id="@+id/btn_history"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_btn_color"
+                android:text="History"
+                 />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/kranthi_ln" />
+
+    <LinearLayout
+        android:id="@+id/no_session_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/kranthi_ln"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+ <LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical">
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No session done today"
+        android:textSize="25dp"
+        android:fontFamily="@font/pheezee_font"
+        android:textColor="@color/light_gray"/>
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please start a session to begin seeing todays history. "
+        android:textSize="16dp"
+        android:fontFamily="@font/pheezee_font"
+        android:textColor="@color/good_green"
+        />
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pat_btn_3"
+        android:text="Start Session"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

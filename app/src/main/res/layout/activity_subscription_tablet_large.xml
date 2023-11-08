@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/popup_window"
+    app:layout_constraintCircleRadius="0dp"
+    android:isScrollContainer="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar_bodypart"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:elevation="@dimen/toolbar_dim_5"
+        app:elevation="@dimen/toolbar_dim_5"
+        tools:ignore="MissingConstraints,ObsoleteLayoutParam">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_back_app_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="20dp"
+                android:src="@drawable/green_back_arrow" />
+
+            <TextView
+                android:gravity="center|left"
+                android:id="@+id/tv_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/pheezee_font"
+                android:text="Premium"
+                style="@style/pheezee_normal"
+                android:textColor="@color/pheezee_text_blue_for_icon_text_background"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="@+id/my_toolbar_bodypart"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_button"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/premium_layout"
+                android:paddingTop="80dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="83dp"
+                    android:layout_height="83dp"
+                    android:layout_marginTop="43dp"
+                    android:background="@drawable/premium_logo"/>
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/subscriptionfirstview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginLeft="126dp"
+                    android:layout_marginRight="126dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:id="@+id/first_500_report_select"
+                        android:background="@drawable/round_corner_premium">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            >
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="500 Reports"
+                                android:textColor="#012E57"
+                                android:textSize="24dp"
+                                android:layout_marginLeft="28dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.08"
+                            >
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 20,000"
+                                android:textColor="#012E57"
+                                android:textSize="28dp"
+                                android:layout_marginLeft="16dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            >
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="16dp"
+                                android:background="@drawable/check_circle"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/first_100_report_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@drawable/round_corner_layout">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            >
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100 Reports"
+                                android:textColor="#012E57"
+                                android:textSize="24dp"
+                                android:layout_marginLeft="16dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            >
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 4,000"
+                                android:textColor="#012E57"
+                                android:textSize="28dp"
+                                android:layout_marginLeft="16dp"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/subscriptionsecondview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginLeft="126dp"
+                    android:layout_marginRight="126dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/second_500_report_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@drawable/round_corner_layout">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            >
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="500 Reports"
+                                android:textColor="#012E57"
+                                android:textSize="24dp"
+                                android:layout_marginLeft="28dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.08"
+                            >
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 20,000"
+                                android:textColor="#012E57"
+                                android:textSize="28dp"
+                                android:layout_marginLeft="16dp"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/second_100_report_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/round_corner_premium">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            >
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="100 Reports"
+                                android:textColor="#012E57"
+                                android:textSize="24dp"
+                                android:layout_marginLeft="16dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="16dp"
+                                android:textColor="#012E57"
+                                android:textSize="28dp"
+                                android:text="₹ 4,000" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            >
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="16dp"
+                                android:background="@drawable/check_circle"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="78dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginRight="78dp"
+                    android:textColor="#B3B3B3"
+                    android:textSize="20dp"
+                    android:text="Our sales team will get in touch with you for the purchase of premium."
+                    android:textAlignment="center" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="78dp"
+                    android:layout_marginLeft="78dp"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/patient_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="56dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/premium_sub_patient_background"
+                        android:fontFamily="@font/ebrima"
+                        android:hint="Kranthi Kiran"
+                        android:text=""
+                        android:paddingLeft="16dp"
+                        android:textColor="#808080"
+                        android:textSize="20dp" />
+                    <EditText
+                        android:id="@+id/Patient_Phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/premium_sub_patient_background"
+                        android:fontFamily="@font/ebrima"
+                        android:hint="7888142439"
+                        android:text=""
+                        android:paddingLeft="16dp"
+                        android:textColor="#808080"
+                        android:textSize="20dp" />
+                    <EditText
+                        android:id="@+id/Patient_Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/premium_sub_patient_background"
+                        android:fontFamily="@font/ebrima"
+                        android:hint="Kranthi.Kiran@gmail.com"
+                        android:text=""
+                        android:paddingLeft="16dp"
+                        android:textColor="#808080"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/overlay_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!-- Top Part -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/svgImageView"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:visibility="gone"
+                            android:src="@drawable/subscription_check_image"
+                            />
+                    </LinearLayout>
+
+
+
+                    <!-- Bottom Part -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Request has been sent!"
+                            android:layout_gravity="center"
+                            android:textColor="#002647"
+                            android:textSize="32dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="30dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Our sales team will contact you"
+                            android:layout_gravity="center"
+                            android:textColor="#002647"
+                            android:textSize="24dp"
+                            android:layout_marginTop="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- Your content here -->
+
+            </FrameLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buy_now_button"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/pheezee_font"
+                android:background="@drawable/round_same_buttons"
+                android:text="Buy Now"
+                android:textAllCaps="false"
+                style="@style/pheezee_normal"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:background="@drawable/buy_printer_background"
+    >
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="30dp"
+                android:src="@drawable/printer_ic_2"/>
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thermal Printer Not Found"
+                android:textSize="20dp"
+                android:textColor="#CCCCCC"
+                android:fontFamily="@font/pheezee_font"/>
+            <LinearLayout
+                android:id="@+id/scanning_printer"
+                android:layout_width="125dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_height="35dp"
+                android:background="@drawable/printer_scanning_background"
+                android:gravity="center">
+                <ProgressBar
+                    android:visibility="visible"
+                    android:id="@+id/progressBar_testing_2"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:progressDrawable="@drawable/custom_progressbar"
+                     />
+                <TextView
+                    android:textColor="@color/white"
+                    android:paddingLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scanning"
+                    android:textSize="16dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/scan_layout_test"
+                android:gravity="center"
+                android:background="@drawable/printer_scan_backfround"
+                android:orientation="horizontal"
+                android:layout_width="92dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="35dp">
+                <ImageView
+                    android:id="@+id/progressBar_testing_1"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:src="@drawable/scan_logo"
+                    />
+
+
+                <TextView
+                    android:id="@+id/scan_th_device"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scan"
+                    android:textSize="16dp"
+                    />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="32dp"
+                android:id="@+id/buy_now_ptr"
+                android:layout_marginBottom="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_printer"
+                android:textSize="20dp"
+                android:fontFamily="@font/pheezee_font"/>
+        </LinearLayout>
+        <View
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:background="@color/bodypart_heading"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_height="1dp"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/other_printer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textSize="20dp"
+                android:textColor="@color/good_green"
+                android:fontFamily="@font/pheezee_font"
+                android:text="Print with other Printer"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
